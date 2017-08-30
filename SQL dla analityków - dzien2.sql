@@ -61,13 +61,13 @@ CustomerId | Qty | Total
 
 use AdventureWorks2014
 
-select * from Sales.SalesOrderHeader
 
-select * from Sales.Customer
+-- z³¹czenie wewnêtrzne
 
 /*
-| AccountNumber | SalesOrderNumber | OrderDate
+ Wyœwietl zestawienie o podanej strukturze:
 
+| AccountNumber | SalesOrderNumber | OrderDate
 */
 
 select 
@@ -297,5 +297,21 @@ inner join AdventureWorks.Sales.Customer as c2
 	on c.CustomerID  = c2.CustomerID
 
 
+-- unikalne wartoœci
 
+select distinct Color from Production.Product
+
+-- wyszukiwanie po fragmencie tekstu
+
+-- znajdŸ produkty, których numer rozpoczyna siê od CR
+select * from Production.Product
+where ProductNumber like 'CR%'
+
+
+select * from Production.Product
+where ProductNumber like 'CR___'
+
+-- znajdŸ produkty, których nazwa zawiera s³owo "Nut"
+select * from Production.Product
+where Name like '%Nut%'+
 
