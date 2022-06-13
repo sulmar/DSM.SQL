@@ -1,5 +1,8 @@
 # Podstawy języka SQL 
 
+Z użyciem przykładowej bazy danych **Sakila**
+https://github.com/ivanceras/sakila/tree/master/sql-server-sakila-db
+
 ### Wybór bazy danych
 
 ~~~ sql
